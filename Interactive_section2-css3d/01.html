@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Interactive Web</title>
+    <style>
+      .world {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60vw; /* vw는 viewport width를 의미한다. */
+        height: 60vh; /* vh는 viewport height를 의미한다. */
+        background: #fff000;
+        perspective: 500px;
+      }
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 150px;
+        border-radius: 0.5em; /* em은 현재 요소의 font-size를 기준으로 한다. */
+        font-size: 1.5rem; /* rem은 root em이다. */
+        background: red;
+        transform: rotateY(45deg);
+        /* transform: perspective(500px) rotateY(45deg); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="world">
+      <div class="card">A</div>
+      <div class="card">B</div>
+      <div class="card">C</div>
+    </div>
+  </body>
+</html>
