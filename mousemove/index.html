@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #13adcc;
+        height: 300vh;
+      }
+
+      h1 {
+        font-size: 30px;
+        padding: 20px;
+      }
+
+      .box {
+        width: 40px;
+        height: 40px;
+        /* background-color: black; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s ease-in-out;
+      }
+      .box img {
+        width: 100px;
+      }
+
+      button {
+        padding: 40px 100px;
+        background-color: black;
+        color: #fff;
+        font-size: 30px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      button:hover {
+        padding: 45px 120px;
+        background-color: #39023f;
+      }
+    </style>
+    <script>
+      window.onload = () => {
+        const box = document.querySelector(".box");
+        const h1 = document.querySelector("h1");
+        const button = document.querySelector("button");
+
+        window.addEventListener("click", (e) => {
+          box.style.top = e.pageY + "px";
+          box.style.left = e.pageX + "px";
+          h1.innerText = `X: ${e.pageX}, Y: ${e.pageY}`;
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <h1></h1>
+    <div class="box">
+      <img src="./butterfly.gif" alt="나비" />
+    </div>
+    <button>버튼</button>
+  </body>
+</html>
